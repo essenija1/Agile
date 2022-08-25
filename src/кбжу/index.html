@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class='resp_code align=' center''>
+        <table id='tab' align='center' cellspacing='0' cellpadding='0' style="width:100%;">
+            <tr>
+                <td align='center' style="color:#4513cf ; font-size: 24px; font-weight: bold;"><br><b>Калькулятор
+                        КБЖУ</b><br><br>
+                    <form name="frm" action="" class='frms noborders'>
+                        <table>
+                            <tr>
+                                <td style="color: #0d0d0e; font-size:24px;">Возраст:
+                                </td>
+                                <td><input type="text" name="age" id="age" align="left" size="3" maxlength="2"
+                                        onkeypress="return cknum(event,age)"></td>
+                                <td>
+                                    <font color="#0d0d0e" size="5">
+                                        лет</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #0d0d0e; font-size:24px;">
+                                    Пол:</td>
+                                <td><input type="radio" name="gen" id="gen" checked>
+                                    <font color="#0d0d0e" size="4">
+                                        Мужчина</font><input type="radio" name="gen" id="gen">
+                                    <font color="#0d0d0e" size="4">
+                                        Женщина</font>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #0d0d0e; font-size:24px;">
+                                    Рост:</td>
+                                <td><select style='width:50%;' name="foot" id="foot" onchange="hcon()">
+                                        <option value="1">1</option>
+                                    </select><select style='width:40%;
+                                        ' name="inch" id="inch" onchange="hcon()">
+                                        <option value="1">55</option>
+                                        <option value="2">60</option>
+                                        <option value="3">65</option>
+                                        <option value="4">70</option>
+                                        <option value="5">75</option>
+                                        <option value="6">80</option>
+                                        <option value="7">85</option>
+                                        <option value="8">90</option>
+                                        <option value="9">95</option>
+                                        <option value="10">200</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #0d0d0e; font-size:24px;">Сантиметры :</td>
+                                <td><input type="text" name="cen" id="cen" size="4" onkeyup="con(cen)"></td>
+                            </tr>
+                            <tr>
+                                <td style="color: #0d0d0e; font-size:24px;">Вес:
+                                </td>
+                                <td><input type="text" name="weight" id="weight" maxlength="3" size="3"
+                                        onkeyup="isNumberKey(this.id)"></td>
+                                <td>
+                                    <select name="wtype" id="wtype">
+                                        <option value="kg">Кг</option>
+                                        <option value="pounds">Фунты</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="color: #0d0d0e; font-size:24px;">Активность:</td>
+                                <td><select style='width:100px;' name="loa" id="loa">
+                                        <option value="1">
+                                            Очень низкая активность(сидячий образ жизни)</option>
+                                        <option value="2">Низкая активность</option>
+                                        <option value="3">Средняя активность</option>
+                                        <option value="4">
+                                            Высокая активнойсть</option>
+                                        <option value="5">Очень высокая активность</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td colspan='2' align="center">
+                                    <input class='blue_button' type="button" value="Калькулятор калорий"
+                                        onclick="cc()"><span id="dumdiv" align="center"
+                                        style=" font-size: 10px;color: #dadada;"><a id="dum"
+                                            style="padding-right:0px; text-decoration:none;color: green;text-align:center;"
+                                            </a></span>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <br>
+                    <table align="center" border="0" class="frms noborders">
+                        <caption>
+                            
+                            <td class="inner" align="center" style="color: #4513cf ; font-size: 24px; font-weight: bold;">КБЖУ</b>
+                            </td>
+                        </caption><br></table>
+
+                       <table align="center" border="0" class="frms noborders">
+                        <tr>
+                            <td align="right" style="color: #0d0d0e; font-size:24px;">Необходимы калораж:</td>
+                            <td class="next"><input type="text" id="rc" style="font-size:13px;" size="15" readonly></td>
+                            <td class="hext"><select name="caltype" id="caltype" onChange="convert()">
+                                    <option value="g">Грамм</option>
+                                    <option value="kg">Килограмм</option>
+                                    <option value="pounds">Функт</option>
+                                </select></td>
+                        </tr>
+                    </table>
+                    <div style="color: #0d0d0e; font-size: 24px; font-weight: bold;">Ежедневный рацион потребления</div>
+                    <table class="frms noborders">
+                        <tr>
+                            <td style="color: #0d0d0e; font-size:24px;">Жиры:</td>
+                            <td style="color: #3D366F; font-size:13px;"><input type="text" id="rf"
+                                    style="font-size:13px;" size="10" readonly></td>
+                            <td>
+                                <font color="#0d0d0e" size="5" style='float:right'>
+                                    <label id="l1"></label> в день
+                                </font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #0d0d0e; font-size:24px;">Протеины:</td>
+                            <td style="color: #3D366F; font-size:13px;"><input type="text" id="rp"
+                                    style="font-size:13px;" size="10" readonly></td>
+                            <td>
+                                <font color="#0d0d0e" size="5" style='float:right'><label id="l2"></label> в день</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #0d0d0e; font-size:24px;">Углеводы:</td>
+                            <td style="color: #3D366F; font-size:13px;"><input type="text" id="rh"
+                                    style="font-size:13px;" size="10" readonly></td>
+                            <td>
+                                <font color="#0d0d0e" size="5" style='float:right'><label id="l3"></label> в день</font>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="color: #0d0d0e; font-size:24px;">Алкоголь:</td>
+                            <td style="color: #3D366F; font-size:13px;"><input type="text" id="ra"
+                                    style="font-size:13px;" size="10" readonly></td>
+                            <td>
+                                <font color="#0d0d0e" size="5" style='float:right'><label id="l4"></label> в день</font>
+                            </td>
+                        </tr>
+                    </table>
+            </tr>
+            </td>
+        </table>
+    </div>
+    <script src="index.js" defer></script>
+</body>
+
+</html>
