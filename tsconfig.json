@@ -1,14 +1,15 @@
 {
-    "compilerOptions": {
-      "outDir": "public/scripts", 
-      "target": "es2022", 
-      "module": "es2022", 
-      "moduleResolution": "node",
-      "allowJs": true,
-      "declaration": true,
-      "declarationDir": "public/scripts/types"
-    }, 
-    "include": [
-      "src/**/*"
-    ] 
-  }
+  "compilerOptions": {
+    "outDir": "public/scripts",
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "declaration": true,
+    "declarationDir": "public/scripts/types"
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
+
