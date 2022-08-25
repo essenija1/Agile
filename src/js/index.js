@@ -1,9 +1,12 @@
-import CaloriesCounter from './modules/CaloriesCounter';
+import CaloriesCounter from "./modules/CaloriesCounter";
+import "../css/style.css";
+import { a } from "./modules/script";
 
-const counterElements = document.querySelectorAll('.counter');
+console.log(a);
 
-counterElements.forEach(elem => {
-  const counter = new CaloriesCounter(elem);
-  counter.init();
+const counterElements = document.querySelectorAll(".counter");
+
+counterElements.forEach((elem) => {
+    const counter = new CaloriesCounter(elem);
+    counter.init();
 });
-
