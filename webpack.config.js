@@ -14,7 +14,20 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: "index.html",
             template: "./index.html",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "meditation/index.html",
+            template: "./meditation/index.html",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "registration/index.html",
+            template: "./registration/index.html",
+        }),
+        new HtmlWebpackPlugin({
+            filename: "kbjy/index.html",
+            template: "./kbjy/index.html",
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin(),
