@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="stylesheet" href="style.css">
     <title>КБЖУ</title>
 </head>
 
@@ -40,58 +39,67 @@
 
         <main class="cbju">
             <div class="cbju_container">
-                <form action="cbju_calculator_form">
                     <h1 class="cbju_heading main_heading">Калькулятор КБЖУ</h1>
 
               
                     <div class="cbju_input">
                         <label class="cbju_heading" for="age">Возраст</label>
-                        <input class="params" type="number" placeholder="0" autofocus required min="1" max="104" />
+                        <input class="params" name="age" type="number" placeholder="0" autofocus required min="1" max="104" />
                         <span class="cbju_unit">лет</span>
                     </div>
 
                     <div class="cbju_input">
                         <label class="cbju_heading" for="height"> Рост </label>
-                        <input class="params" type="number" placeholder="0" autofocus required min="150" max="210" />
+                        <input class="params" name="height" type="number" placeholder="0" autofocus required min="150" max="210" />
                         <span class="cbju_unit">см</span>
                     </div>
 
 
                     <div class="cbju_input">
                         <label class="cbju_heading" for="weight"> Вес </label>
-                        <input class="params" type="number" placeholder="0" autofocus required min="49" max="130" />
+                        <input class="params" name="weight" type="number" placeholder="0" autofocus required min="49" max="130" />
                         <span class="input__cbju_unit">кг</span>
                     </div>
-
-                </form>
-
-                <form class="cbju__gender_form" name="pol" action="#" method="post">
 
                     <h2 class="cbju_heading">Пол</h2>
 
                     <div class="gender">
-                        <input type="radio" name="pol" class="select__gender" checked required />Женщина
-                        <input type="radio" name="pol" class="select__gender" checked required />Мужчина
+                        <label >
+                            <input type="radio" name="gender" class="select__gender" value="women" required />
+                            Женщина
+                        </label>
+                        
+                        <label >
+                            <input type="radio" name="gender" class="select__gender"  value="men" checked required />
+                            Мужчина
+                        </label>
+                        
                     </div>
 
-                </form>
+                    <div class="">
+                        <span>Активность</span>
+                        <select class="activity">
+                            <option value="1.2">сидячая работа</option>
+                            <option value="1.3">сидячая плюс легкие виды спорта до трех раз в неделю</option>
+                            <option value="1.5">работа на ногах до 12 часов без тяжестей</option>
+                            <option value="1.4">сидячий труд и спорт больше трех раз в неделю</option>
+                            <option value="1.6">работа на ногах и интенсивный спорт</option>
+                            <option value="1.6">сидячая работа и спорт 5 дней в неделю</option>
+                            <option value="1.9">работа на ногах до 12 часов плюс спорт интенсивный 5 раз в неделю</option>
+                            <option value="1.3"> домохозяйки</option>
+                            <option value="1.5"> хозяйки с наличием огорода</option>
+                        </select>
+                    </div>
 
-                <form action="cbju_activity">
-                    Активность
-                    <select class="activity">
-                        <option value="1">Очень низкая активность(сидячий образ жизни)</option>
-                        <option value="2">Низкая активность</option>
-                        <option value="3">Средняя активность</option>
-                        <option value="4">Высокая активность</option>
-                        <option value="5">Очень выскокая активность(спортсмен)</option>
-                    </select>
-                </form>
+                  
+                    
+                   
 
                 <div class="form__cbju_submit">
-                    <button class="cbju_blue_button" name="submit" type="submit" disabled>
+                    <button class="cbju_blue_button" name="submit" >
                         Калькулятор калорий
                     </button>
-                    <button class="form__cbju reset_button" name="reset" type="reset" disabled>
+                    <button class="form__cbju reset_button" >
                         <svg width="24" height="24" viewbox="0 0 24 24" fill="#FD3636"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -100,54 +108,16 @@
                         <span> Очистить поля и расчёт </span>
                     </button>
                 </div>
-                </form>
 
-                </form>
+                <div class="result">
+                    
+                   </div>
 
 
-                <div class="container_cbju">
-                    <h1 class="cbju_heading main_heading">КБЖУ</h1>
-                    <h2 class="cbju__heading main_heading">Ежедневный рацион потребления</h2><br>
 
-                    <div class="measure">
-                        <label class="input__weight"  for="weight">Вес</label>
-                        <input class="params" type="number" placeholder="0" autofocus inputmode="decimal" maxlength="4"
-                            required min="100" max="1000" />
-                        <select class="measures" name="wtype" id="wtype">
-                            <option value="gramm">Грамм</option>
-                            <option value="kg">Кг</option>
-                            <option value="pounds">Фунты</option>
-                        </select>
-                    </div>
-                </div>
+                
 
-                <div class="cbju_input">
-                    <label class="cbju_heading" for="fats">Жиры</label>
-                    <input class="params" type="number" placeholder="0" autofocus required min="10" max="100" />
-                    <span class="input__cbju_unit">в день</span>
-
-                </div>
-
-                <div class="cbju_input">
-                    <label class="cbju_heading" for="proteins">Протеины</label>
-                    <input class="params" type="number" placeholder="0" autofocus required min="10" max="100" />
-                    <span class="input__cbju_unit">в день</span>
-
-                </div>
-
-                <div class="cbju_input">
-                    <label class="cbju_heading" for="carbohydrates">Углеводы</label>
-                    <input class="params" type="number" placeholder="0" autofocus required min="10" max="100" />
-                    <span class="input__cbju_unit">в день</span>
-
-                </div>
-
-                <div class="cbju_input">
-                    <label class="cbju_heading" for="Alcohol">Алкоголь</label>
-                    <input class="params" type="number" placeholder="0" autofocus required min="50" max="200" />
-                    <span class="input__cbju_unit">в день</span>
-
-                </div>
+                
             </div>
         </div>
 </body>

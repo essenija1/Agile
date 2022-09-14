@@ -4,7 +4,7 @@ import './css/global.css'
 
 const elementsToObserve = document.querySelectorAll('section[id]'),
   visibleClass = 'visible',
-  nav = document.querySelector('nav'),
+  nav = document.querySelector('.nav'),
   navPath = nav.querySelector('svg path'),
   navListItems = [...nav.querySelectorAll('li')],
   navItems = navListItems
