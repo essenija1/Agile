@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 1160px;
+}
+
+body {
+  width: 100%;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: 'PT Sans Caption', 'Arial', sans-serif;
+  color: var(--color-text-black);
+}
+
+.menu_page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.week_menu {
+  flex: 1 0 auto;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  background-image: url('../../assets/img/main-background.jpg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-accent);
+
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.menu_container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.menu_heading,
+.heading_top {
+  margin: 0;
+  font-family: 'PT Sans Caption', 'Arial', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  text-align: center;
+}
+
+.heading_top {
+  font-size: 64px;
+  line-height: 83px;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  gap: 10px;
+}
+
+.dni_nedeli, .week__menu-item {
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid black;
+
+  padding: 10px;
+
+  width: 45%;
+}
+
+.day {
+  text-align: center;
+}
+
+.meel {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-top: 10px;
+}
+
+.dishes {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.meel__name {
+  padding-bottom: 0;
+  padding-top: 0;
+  padding-left: 10px;
+
+  cursor: initial;
+}
+
+.menu__title {
+  display: flex;
+  align-items: center;
+  width: 45%;
+}
+
+.shopping_list {
+  /* display: none; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 20px;
+}
+
+.plan_menu_button {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 40px;
+  margin-top: 40px;
+}
+
+.menu_for_week {
+  background: green;
+  padding: 10px 20px;
+  border: 0;
+
+  cursor: pointer;
+  color: white;
+  margin-top: 20px;
+}
+
+.checkboxes {
+  margin-top: 20px;
+}
+
+.checkbox__product {
+  width: auto;
+  outline: none;
+}
+
+.checkbox__label {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.products__buy {
+  display: none;
+
+  margin-top: 10px;
+}
+
+.products__buy.active {
+  display: block;
+}
+
+.week__menu {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px
+}
+
+.item__title {
+  text-align: center;
+}
+
+.item__text {
+  margin-top: 5px;
+}

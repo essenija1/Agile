@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.registration {
+    background-image: url("../../assets/img/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 150px;
+    height: calc(100vh - 185px);
+}
+
+.form__switcher {
+    display: flex;
+}
+
+.form__tab {
+    padding: 10px 20px;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+.tab_login {
+    background-color: rgb(12, 130, 189);
+}
+
+.tab_register:hover {
+    background-color: #cec1c1;
+}
+
+.tab_login:hover {
+    background-color: #11618a;
+}
+
+.tabs:hover,
+p {
+    cursor: pointer;
+}
+
+#cont {
+    width: 100%;
+    height: 300px;
+    background-color: rgba(11, 177, 224, 0.82);
+    border: 2px solid #ffffff;
+}
+
+input {
+    display: block;
+    width: 250px;
+    margin: 10px 13px;
+    padding: 10px;
+    font-size: 1.3em;
+    color: rgba(11, 177, 224, 0.82);
+    outline: 2px solid #ffffff;
+}
+
+input[type="submit"] {
+    color: #6e6e6e;
+
+}
+
+#clear {
+    clear: both;
+}
+
+.comm {
+    position: absolute;
+    visibility: hidden;
+}
+
+#login {
+    visibility: visible;
+}
+
+h3 {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    color: #ffffff;
+}
+
+#forgot h3 {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#forgot div {
+    margin-top: 30px;
+}
+
+p {
+    padding: 10px 15px;
+    font-size: 1.3em;
+    color: #ffffff;
+}
+
+
+
+
+.input__email {
+    border: 2px solid #0d0d0e;
+    width: 250px;
+    margin: 10px 13px;
+    padding: 9px;
+    font-size: 1.3em;
+    color: rgba(11, 177, 224, 0.82);
+}
+
+.input__password {
+    border: 2px solid #0d0d0e;
+    width: 250px;
+    margin: 10px 13px;
+    font-size: 1.3em;
+    color: rgba(11, 177, 224, 0.82);
+
+}
+
+.button__submit {
+    margin-left: 13px;
+    width: 250px;
+
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 1.3em;
+}
