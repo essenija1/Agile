@@ -99,6 +99,8 @@
   height: 40px;
   width: 300px;
   font-size: 20px;
+
+  cursor: pointer;
 }
 
 .main_heading {
@@ -232,4 +234,17 @@
 
 .input__weight {
   margin-right: 5px;
+}
+
+.result {
+  margin-top: 50px;
+}
+
+.result__list {
+  margin-top: 20px;
+}
+
+.result__list li {
+  list-style-type: none;
+  font-size: 20px;
 }
