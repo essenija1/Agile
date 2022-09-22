@@ -1,5 +1,5 @@
+/* 
 
-/* === Grid and base layout === */
 
 :root {
   --highlight: #91cb3e;
@@ -42,7 +42,7 @@ article {
   padding-top: 50px;
 }
 
-/* === Navbar and marker === */
+*/
 
 nav ul {
   margin: 0;
@@ -85,7 +85,7 @@ nav path {
   stroke-linejoin: round;
 }
 
-/* === Body contents === */
+
 
 section[id] {
   margin: 25px 0;
@@ -131,9 +131,7 @@ code {
   color: #333;
 }
 
-/* === Adjustments === */
 
-/* Scroll all the way up even if the first section starts a couple hundred pixels down the page */
 section:first-of-type {
   margin-top: -300px;
   padding-top: 350px;
@@ -144,4 +142,152 @@ section:last-of-type,
 section:last-of-type p:last-of-type {
   margin-bottom: 0;
   padding-bottom: 0;
+} 
+
+
+
+
+
+body{
+  background: #8ca531;
+  font-family: 'Jura', sans-serif;
+  overflow: hidden;
 }
+.scene .text {
+  position: absolute;
+  font-size: 1.5em;
+  width: 400px;
+  color: #fff;
+  top: 110px;
+  left: -90px;
+  text-align: center;
+}
+
+
+
+.scene .text1 {
+  position: absolute;
+  font-size: 1em;
+  width: 300px;
+  color: #fff;
+  top: 150px;
+  left: -45px;
+  text-align: center;
+}
+
+
+.scene .text2 {
+  position: absolute;
+  font-size: 0.8em;
+  width: 300px;
+  color: #fff;
+  top: 310px;
+  left: -40px;
+  text-align: left;
+}
+
+
+
+.scene  {
+  cursor: pointer;
+  position: fixed;
+/*  border: 1px dotted #000;*/
+  margin: auto;
+  height: 100px;
+  width: 200px;
+  left: 0; top: 0px; right: 0; bottom: 0;
+}
+
+.apple {
+  position: absolute;
+  background: #e84b17;
+  left: 55px;
+  width: 95px;
+  height: 85px;
+  border: 5px solid #000;
+  border-radius: 100%;
+}
+.apple .peduncle {
+  position: absolute;
+  left:27px;
+  top:5px;
+  background: transparent;
+  background: linear-gradient(to top, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 50%); 
+  width: 35px;
+  height: 15px;
+  border-radius: 100%;
+  border-bottom: 5px solid #000;
+}
+.apple .peduncle:before{
+  content: '';
+  position: absolute;
+  background: transparent;
+  width: 10px;
+  height: 40px;
+  border-radius: 50%;
+  left: 15px;
+  top: -30px;
+  border-left: 5px solid;
+  border-top: 5px solid;  
+}
+.apple .peduncle:after{
+  content: '';
+  position: absolute;
+  background: #8fef10;
+  width: 40px;
+  height: 40px;
+  border-radius: 100% 0 50% 0;
+  left: -35px;
+  top: -30px;
+  border: 5px solid;
+  transform: rotate(20deg)
+}
+
+.apple:after{
+  content: '';
+  position: absolute;
+  background: transparent;
+  width: 10px;
+  height: 20px;
+  border-left: 5px solid #fff;
+  border-radius: 100%;
+  left: 5px;
+  top: 30px;
+}
+
+.apple:before{
+  content: '';
+  position: absolute;
+  background: #000;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  left: 45px;
+  top: 84px;
+}
+
+.scene:hover .apple{
+  animation: jump 2s infinite,  color 8s infinite;
+}
+
+@keyframes jump{
+  0%{ margin-top: -300px; }
+  25%{ margin-top: -10px; }
+  30%{ margin-top: 0px; }
+  35%{ margin-top: -10px; }
+  45%{ margin-top: -20px; }
+  90%{ margin-top: 0; }
+  99.99%{ margin-top: 0; }
+  100%{ margin-top: -300px; }
+}
+
+@keyframes color{
+  0%{  background: #f4f135; }
+  25%{ background: #f7e818; }
+  50%{ background: #f4463d; }
+  75%{ background: #67f784; }  
+  100%{  background: #ff0c00; }
+}
+
+
+
